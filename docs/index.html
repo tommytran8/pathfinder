@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>PathFinder</title>
+    </head>
+    <body>
+        <main>
+            <div class="back">
+            </div>              
+            <div class="pathfinder">
+                <h1>PathFinder Algorithm</h1>
+                <canvas id="display" width="400" height="400" style="border: solid white"></canvas>
+                <div class="form">
+                    <label for="startx">Start: x</label>
+                    <input type="text" id="startx" name="startx" maxlength="2" onkeydown="numberonly()" oninput="setStartx()" value="0">
+                    <label for="starty">Start: y</label>
+                    <input type="text" id="starty" name="starty" maxlength="2" onkeydown="numberonly()" oninput="setStarty()" value="0">
+                    <label for="endx">End: x</label>
+                    <input type="text" id="endx" name="endx" maxlength="2" onkeydown="numberonly()" oninput="setEndx()" value="39">
+                    <label for="endy">End: y</label>
+                    <input type="text" id="endy" name="endy" maxlength="2" onkeydown="numberonly()" oninput="setEndy()" value="39">
+                    <div class="checks">
+                        <label for="visual-step">Visual Steps</label>
+                        <input type="checkbox" id="visual-step" name="visual-step" onchange="setVisualSteps()">
+                        <label for="random-walls">Random Walls?</label>
+                        <input type="checkbox" id="random-walls" name="random-walls" onchange="setRandomWalls()">
+                        <label for="manual-walls">Manual Walls?</label>
+                        <input type="checkbox" id="manual-walls" name="manual-walls" onchange="setManualWalls()"> 
+                        <!--delete this if cant figure it out--> 
+                    </div>
+                    
+                    <button class="button" onclick="validinput()">Submit</button>
+                </div>
+                <div class="draw">
+                    <button class="button" onclick="donedrawing()">Done Drawing</button>
+                    
+                </div>
+                <div class="refresh">
+                    <a href="./index.html">
+                        <button class="button" onclick="">Refresh</button>
+                    </a>
+                </div>
+                <h2 id="gamestate">Please put values in range 0-39</h2>
+            </div>
+            <div class="next">
+            </div>
+        </main>
+        <script src="./events.js"></script>
+    </body>
+</html>

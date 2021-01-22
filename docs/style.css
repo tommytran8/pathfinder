@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background: black;
+}
+main{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.pathfinder{
+    position: relative;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    opacity: 1;
+}
+
+.form *{
+    margin: .5vh;
+    font-size: 1.9vh;
+}
+input {
+    height: 3vh;
+    width: 7vh;
+    border-width: 3.5px;
+}
+.checks{
+    display: flex;
+}
+.checks *{
+    font-size: 1.5vh;
+    height: 2vh;
+    width: 4vh;
+}
+#gamestate{
+    margin: 2vh 0;
+}
+
+.back{
+    position: relative;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.next{
+    position: relative;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.arrow{
+    margin: 0 5vh;
+    transform: scale(.3);
+    cursor: pointer;
+}
+.arrow:hover{
+    animation: hover 2s ease-in-out infinite;
+}
+@keyframes hover {
+    0% {transform: scale(.3);}
+    50% {transform: scale(.45);}
+    100% {transform: scale(.3);}
+}
+
+.button{
+    cursor: pointer;
+}
+.draw{
+   opacity: 0; 
+   cursor: none;
+   pointer-events: none;
+}
+.draw.open{
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: all;
+}
+.draw.close{
+    opacity: 0;
+    cursor: none;
+    pointer-events: none;    
+    display: none;
+}
+.form.open{
+    opacity: 1;
+}
+.form.close{
+    opacity: 0;
+}
+.refresh{
+   opacity: 0; 
+   cursor: none;
+   pointer-events: none;
+}
+.refresh.open{
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: all;
+}
